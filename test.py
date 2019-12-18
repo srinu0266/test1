@@ -250,4 +250,72 @@ msg="""
 	</NotifyEventVBMRequest>
 </tns1:READ_WRITE_REQ_GBO>"""
 
+
+msg="""
+<?xml version="1.0" encoding="UTF-8"?>\n
+<tns1:READ_WRITE_REQ_GBO
+	xmlns:ws-bf="http://docs.oasis-open.org/wsrf/bf-2"
+	xmlns:ad="http://www.w3.org/2005/08/addressing"
+	xmlns:json="http://www.ibm.com/xmlns/prod/2009/jsonx"
+	xmlns:cmn="http://group.vodafone.com/schema/common/v1"
+	xmlns:cct="urn:un:unece:uncefact:documentation:standard:CoreComponentType:2"
+	xmlns:vbo="http://group.vodafone.com/schema/vbo/technical/event/v1"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:extvbo="http://group.vodafone.com/schema/extension/vbo/technical/event/v1"
+	xmlns:tns="http://www.w3.org/2005/08/addressing"
+	xmlns:tns1="http://group.vodafone.com/schema/service1/event/v1"
+	xmlns:vbm="http://group.vodafone.com/schema/vbm/technical/event/v1"
+	xmlns:hed="http://group.vodafone.com/contract/vho/header/v1"
+	xmlns:flt="http://group.vodafone.com/contract/vfo/fault/v1"
+	xmlns:bf="http://docs.oasis-open.org/wsrf/bf-2"
+	xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning"
+	xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2">
+	<Header>
+		<RouteInfo>
+			<hed:Route>
+				<hed:ID>Event.Notify</hed:ID>
+				<hed:Keys>
+					<hed:Key/>
+				</hed:Keys>
+			</hed:Route>
+		</RouteInfo>
+		<Correlation>
+			<hed:ConversationID>12312312345601_TAP</hed:ConversationID>
+		</Correlation>
+		<Destination>
+			<hed:System>LEGAL.CDRValidationResponse</hed:System>
+		</Destination>
+		<Source>
+			<hed:Division>0006</hed:Division>
+			<hed:System>DLT</hed:System>
+		</Source>
+	</Header>
+	<NotifyEventVBMRequest>
+		<vbm:EventVBO>
+			<cmn:Status>Yes</cmn:Status>
+			<vbo:Parts>
+				<vbo:Specification>
+					<cmn:CharacteristicsValue characteristicName="CallType">
+						<cmn:Value>SMS</cmn:Value>
+					</cmn:CharacteristicsValue>
+					<cmn:CharacteristicsValue characteristicName="cPartyNumber">
+						<cmn:Value/>
+					</cmn:CharacteristicsValue>
+					<cmn:CharacteristicsValue characteristicName="gtNumber">
+						<cmn:Value>919898051914</cmn:Value>
+					</cmn:CharacteristicsValue>
+					<cmn:CharacteristicsValue characteristicName="uniquepercentage">
+						<cmn:Value/>
+					</cmn:CharacteristicsValue>
+					<cmn:CharacteristicsValue characteristicName="CDRTime">
+						<cmn:Value>15-SEP-2019 23:43:13</cmn:Value>
+					</cmn:CharacteristicsValue>
+				</vbo:Specification>
+			</vbo:Parts>
+		</vbm:EventVBO>
+	</NotifyEventVBMRequest>
+</tns1:READ_WRITE_REQ_GBO>"""
+
+
 ParsexmlMsg(msg)
+
